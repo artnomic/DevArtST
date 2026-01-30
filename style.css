@@ -43,6 +43,7 @@ header {
   .hero__text,
   .hero__cta {
     width: 30%;
+    text-align: end;
   }
 
   .hero__text {
