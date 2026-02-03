@@ -13,11 +13,21 @@ body {
   background-color: #0c0102;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 button {
   font-family: "Poppins", sans-serif;
-   cursor: pointer;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 16px 0px;
+  border-bottom: 1px solid white;
 }
 
 header {
@@ -27,6 +37,21 @@ header {
   padding: 4vw;
   position: absolute;
   z-index: 10;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
 }
 
 .hero {
@@ -65,20 +90,165 @@ header {
     align-items: flex-end;
 
     p {
-        font-size: 2vw;
-        margin-bottom: 32px;
+      font-size: 2vw;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.bg__monsters {
+  background-image: url(assets/images/bg-sec2.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.cities {
+  flex-direction: column;
+
+  .city__button,
+  .cities__cards,
+  .city {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .city__button {
+    align-items: center;
+  }
+
+  .cities__cards {
+    margin-top: 52px;
+
+    .city {
+      background-image: url(assets/images/card1.webp);
+      width: 32%;
+      aspect-ratio: 16/9;
+      background-size: cover;
+      background-position: center;
+      align-items: flex-end;
+      padding: 20px;
     }
 
-    button {
-        background-color: transparent;
-        color: white;
-        font-size: 16px;
-        display: flex;
-        gap: 12px;
-        border: none;
-        outline: none;
-        padding: 16px 0px;
-        border-bottom: 1px solid white;
+    .city:nth-child(2) {
+      background-image: url(assets/images/card2.webp);
     }
+
+    .city:nth-child(3) {
+      background-image: url(assets/images/card3.webp);
+    }
+  }
+}
+
+.reviews {
+  flex-direction: column;
+
+  .reviews__testimonials,
+  .reviews__logos {
+    display: flex;
+  }
+
+  .reviews__logos {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reviews__testimonials {
+    margin-top: 62px;
+    justify-content: space-between;
+
+    .reviews__testimonial {
+      width: 31%;
+    }
+  }
+}
+
+.thanks {
+  flex-direction: column;
+  align-items: center;
+
+  ul {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(assets/images/bg-footer.webp);
+  background-position: center;
+  background-size: cover;
+
+  .footer__content {
+    display: flex;
+    width: 100%;
+    padding: 7vw;
+
+    .footer__text {
+      width: 30%;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        font-size: 3.7vw;
+        font-family: "Benguiat", sans-serif;
+      }
+    }
+
+    .footer__sections {
+      display: flex;
+      flex: 1;
+      justify-content: end;
+      gap: 6%;
+      align-items: end;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      .footer__section__social {
+        ul {
+          display: flex;
+          gap: 12px;
+        }
+      }
+    }
+  }
+
+  .footer__logos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .footer__lyrics {
+    width: max-content;
+    display: flex;
+
+    h3 {
+      color: rgb(191, 191, 191);
+      font-size: 12vw;
+      padding-left: 8vw;
+      font-family: "Benguiat", sans-serif;
+      mix-blend-mode: color-dodge;
+      animation: infinite_text 10s linear infinite;
+    }
+  }
+}
+
+@keyframes infinite_text {
+  100% {
+    transform: translateX(-100%);
   }
 }

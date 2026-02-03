@@ -17,6 +17,7 @@
       <h2>ART</h2>
       <img src="assets/images/netflix-logo.svg" alt="netflix-logo" />
     </header>
+
     <main>
       <section class="hero">
         <div class="hero__text">
@@ -34,71 +35,75 @@
         </div>
       </section>
 
-      <section class="cities">
-        <div class="city__button">
-          <h2>ESCOLHA SUA CIDADE</h2>
-          <button>
-            COMPRAR INGRESSOS
-            <img src="assets/images/seta-botao.svg" alt="seta-botao" />
-          </button>
-        </div>
-        <div class="city">
-          <h3>Sidney</h3>
-          <p>INGRESSOS DISPONÍVEIS</p>
-        </div>
-        <div class="city">
-          <h3>Cidade de México</h3>
-          <p>INGRESSOS DISPONÍVEIS</p>
-        </div>
-        <div class="city">
-          <h3>Yas Island</h3>
-          <p>INGRESSOS DISPONÍVEIS</p>
-        </div>
-      </section>
+      <div class="bg__monsters">
+        <section class="cities">
+          <div class="city__button">
+            <h2>ESCOLHA SUA CIDADE</h2>
+            <button>
+              COMPRAR INGRESSOS
+              <img src="assets/images/seta-botao.svg" alt="seta-botao" />
+            </button>
+          </div>
+          <div class="cities__cards">
+            <div class="city">
+              <h3>Sidney</h3>
+              <p>INGRESSOS DISPONÍVEIS</p>
+            </div>
+            <div class="city">
+              <h3>Cidade de México</h3>
+              <p>INGRESSOS DISPONÍVEIS</p>
+            </div>
+            <div class="city">
+              <h3>Yas Island</h3>
+              <p>INGRESSOS DISPONÍVEIS</p>
+            </div>
+          </div>
+        </section>
 
-      <section class="reviews">
-        <div class="reviews__logos">
-          <img
-            src="assets/images/netflix-logo.svg"
-            alt="netflix-logo"
-            class="logos"
-          /><img
-            src="assets/images/clio-logo.svg"
-            alt="clio-logo"
-            class="logos"
-          /><img
-            src="assets/images/fever-logo.svg"
-            alt="fever-logo"
-            class="logos"
-          />
-        </div>
-        <div class="reviews__testimonials">
-          <div class="reviews__testimonial">
-            <img src="assets/images/img-dep1.webp" alt="testimonial" />
-            <p>
-              "Guests are immersed into an original "Stranger Things"
-              storyline...[it] combines the special effects of a 3D Universal
-              Studios ride with a telekinetic escape room."
-            </p>
+        <section class="reviews">
+          <div class="reviews__logos">
+            <img
+              src="assets/images/netflix-logo.svg"
+              alt="netflix-logo"
+              class="logos"
+            /><img
+              src="assets/images/clio-logo.svg"
+              alt="clio-logo"
+              class="logos"
+            /><img
+              src="assets/images/fever-logo.svg"
+              alt="fever-logo"
+              class="logos"
+            />
           </div>
-          <div class="reviews__testimonial">
-            <img src="assets/images/img-dep2.webp" alt="testimonial" />
-            <p>
-              "Immerse yourself on your own adventure with Eleven, Michael,
-              Dustin, Lucas, Max and Will for a very special episode starring
-              none other than you."
-            </p>
+          <div class="reviews__testimonials">
+            <div class="reviews__testimonial">
+              <img src="assets/images/img-dep1.webp" alt="testimonial" />
+              <p>
+                "Guests are immersed into an original "Stranger Things"
+                storyline...[it] combines the special effects of a 3D Universal
+                Studios ride with a telekinetic escape room."
+              </p>
+            </div>
+            <div class="reviews__testimonial">
+              <img src="assets/images/img-dep2.webp" alt="testimonial" />
+              <p>
+                "Immerse yourself on your own adventure with Eleven, Michael,
+                Dustin, Lucas, Max and Will for a very special episode starring
+                none other than you."
+              </p>
+            </div>
+            <div class="reviews__testimonial">
+              <img src="assets/images/img-dep3.webp" alt="testimonial" />
+              <p>
+                "The Stranger Things Experience is a scary, endearing,
+                hilarious, and joyous celebration of everything we already love
+                about the show."
+              </p>
+            </div>
           </div>
-          <div class="reviews__testimonial">
-            <img src="assets/images/img-dep3.webp" alt="testimonial" />
-            <p>
-              "The Stranger Things Experience is a scary, endearing, hilarious,
-              and joyous celebration of everything we already love about the
-              show."
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section class="thanks">
         <h2>OBRIGADO POR SE JUNTAR A NÓS NESTA AVENTURA EM:</h2>
@@ -117,53 +122,62 @@
         </ul>
       </section>
     </main>
+
     <footer>
-      <div class="footer__text">
-        <h3>THE EXPERIENCE</h3>
-        <h2>STRANGER THINGS</h2>
-      </div>
-      <div class="footer__sections">
-        <div class="footer__section social">
-          <h3>REDES SOCIAIS</h3>
-          <ul>
-            <li>
-              <img
-                src="assets/images/footer-facebook.svg"
-                alt="facebook-logo"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/footer-instagram.svg"
-                alt="instagram-logo"
-              />
-            </li>
-            <li>
-              <img src="assets/images/footer-twitter.svg" alt="twitter-logo" />
-            </li>
-          </ul>
+      <div class="footer__content">
+        <div class="footer__text">
+          <h3>THE EXPERIENCE</h3>
+          <h2>STRANGER THINGS</h2>
         </div>
-        <div class="footer_section partners">
-          <h3>PARCEIRO DE MÍDIA</h3>
-          <img src="assets/images/footer-parceiro.svg" alt="secretmidia-logo" />
-        </div>
-        <div class="footer_section institutional">
-          <nav>
-            <h3>INSTITUCIONAL</h3>
+        <div class="footer__sections">
+          <div class="footer__section__social">
+            <h3>REDES SOCIAIS</h3>
             <ul>
-              <li>Contato</li>
-              <li>Imprensa</li>
-              <li>Parcerias</li>
-              <li>Influenciadores</li>
+              <li>
+                <img
+                  src="assets/images/footer-facebook.svg"
+                  alt="facebook-logo"
+                />
+              </li>
+              <li>
+                <img
+                  src="assets/images/footer-instagram.svg"
+                  alt="instagram-logo"
+                />
+              </li>
+              <li>
+                <img
+                  src="assets/images/footer-twitter.svg"
+                  alt="twitter-logo"
+                />
+              </li>
             </ul>
-          </nav>
+          </div>
+          <div class="footer__section__partners">
+            <h3>PARCEIRO DE MÍDIA</h3>
+            <img
+              src="assets/images/footer-parceiro.svg"
+              alt="secretmidia-logo"
+            />
+          </div>
+          <div class="footer__section__institutional">
+            <nav>
+              <h3>INSTITUCIONAL</h3>
+              <ul>
+                <li>Contato</li>
+                <li>Imprensa</li>
+                <li>Parcerias</li>
+                <li>Influenciadores</li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-      <div class="footer_logos">
+      <div class="footer__logos">
         <img src="assets/images/netflix-logo.svg" alt="netflix-logo" />
         <img src="assets/images/fever-logo.svg" alt="fever-logo" />
       </div>
-      <div class="footer_lyrics">
+      <div class="footer__lyrics">
         <h3>THE EXPERIENCE</h3>
         <h3>THE EXPERIENCE</h3>
         <h3>THE EXPERIENCE</h3>
