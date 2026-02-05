@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 @font-face {
   font-family: "Benguiat";
   src: url(assets/fonts/Benguiat\ Bold.ttf);
@@ -13,7 +18,6 @@ body {
   background-color: #0c0102;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
 }
 
 button {
@@ -55,20 +59,32 @@ ul {
 }
 
 .hero {
-  background-image: url("assets/images/hero.webp");
-  background-position: 50% 0%;
-  background-size: cover;
-  width: 100%;
   height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 7vw 7vw 7vw;
+  position: relative;
+
+  picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+  }
 
   .hero__text,
   .hero__cta {
     width: 30%;
-    text-align: end;
+    z-index: 3;
   }
 
   .hero__text {
@@ -88,12 +104,24 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    text-align: end;
 
     p {
       font-size: 2vw;
       margin-bottom: 32px;
     }
   }
+}
+
+.hero::before {
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
 }
 
 .bg__monsters {
@@ -250,5 +278,171 @@ footer {
 @keyframes infinite_text {
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-widht: 1500px) {
+  .cities {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .cities .cities__cards .city {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 4vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 26% 4vw 0;
+
+    .hero__text,
+    .hero__cta {
+      width: 100%;
+    }
+
+    .hero__text {
+      h3,
+      h1 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 12vw;
+      }
+    }
+
+    .hero__cta {
+      align-items: start;
+
+      p {
+        font-size: 5.5vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .cities {
+    margin-top: 80px;
+
+    button {
+      display: none;
+    }
+
+    .cities__cards {
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .city {
+        width: 100%;
+      }
+    }
+  }
+
+  .reviews {
+    .reviews__logos {
+      img:nth-child(1),
+      img:nth-child(3) {
+        width: 20%;
+      }
+
+      img:nth-child(2) {
+        width: 40%;
+      }
+    }
+
+    .reviews__testimonials {
+      flex-direction: column;
+      gap: 48px;
+
+      .reviews__testimonial {
+        width: 100%;
+      }
+    }
+  }
+
+  .thanks {
+    margin: 40px 0px 60px;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      width: max-content;
+      gap: 32px;
+      animation: infinite_text 10s linear infinite;
+    }
+  }
+
+  footer {
+    padding-top: 40px;
+
+    .footer__content {
+      padding: 4vw;
+      flex-direction: column;
+
+      .footer__text {
+        width: 100%;
+
+        h2,
+        h3 {
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 12vw;
+        }
+      }
+
+      .footer__sections {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        .footer__section__social {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 40px 0px 32px;
+        }
+
+        .footer__section__partners {
+          width: 50%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .footer__section__institutional {
+          width: 40%;
+        }
+      }
+
+      .footer__logos {
+        margin-top: 40px;
+      }
+
+      .footer__lyrics h3 {
+        font-size: 20vw;
+      }
+    }
   }
 }
